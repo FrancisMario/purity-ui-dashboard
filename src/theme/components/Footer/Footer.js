@@ -29,16 +29,19 @@ export default function Footer(props) {
       >
         &copy; {1900 + new Date().getYear()},{" "}
         <Text as="span">
-          Powered by 
+          {document.documentElement.dir === "rtl"
+            ? " مصنوع من ❤️ بواسطة"
+            : "Made  by "}
         </Text>
-        &
         <Link
           // color={linkTeal}
           color="teal.400"
           href="https://www.gisqo.com"
           target="_blank"
         >
-          Gisqo 
+          {document.documentElement.dir === "rtl"
+            ? " توقيت الإبداعية"
+            : "Gisqo "}
         </Link>
       </Text>
     </Flex>
