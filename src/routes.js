@@ -1,9 +1,10 @@
 // import
 import Dashboard from "views/Dashboard/Dashboard";
-import Tables from "views/Dashboard/Tables";
-import Billing from "views/Dashboard/Billing";
-import Profile from "views/Dashboard/Profile";
-import Business from "views/Dashboard/Business";
+import Tables from "views/Admin/Tables";
+import Billing from "views/Admin/Billing";
+import Profile from "views/User/Profile";
+import Businesses from "views/Admin/Businesses";
+import MapView from "views/Admin/MapView";
 
 import {
   HomeIcon,
@@ -55,15 +56,15 @@ var dashRoutes = [
         name: "Map View",
         icon: <PersonIcon color="inherit" />,
         secondaryNavbar: true,
-        component: Business,
+        component: MapView,
         layout: "/admin",
       },
       {
         path: "/business",
-        name: "Businesses",
+        name: "Businesseses",
         icon: <PersonIcon color="inherit" />,
         secondaryNavbar: true,
-        component: Business,
+        component: Businesses,
         layout: "/admin",
       },
       {
@@ -71,33 +72,9 @@ var dashRoutes = [
         name: "Assesments",
         icon: <PersonIcon color="inherit" />,
         secondaryNavbar: true,
-        component: Business,
+        component: Businesses,
         layout: "/admin",
-      },
-      {
-        path: "/assesment",
-        name: "Assesments",
-        icon: <PersonIcon color="inherit" />,
-        secondaryNavbar: true,
-        component: Business,
-        layout: "/admin",
-      },
-      {
-        path: "/assesment",
-        name: "Assesments",
-        icon: <PersonIcon color="inherit" />,
-        secondaryNavbar: true,
-        component: Business,
-        layout: "/admin",
-      },
-      {
-        path: "/assesment",
-        name: "Assesments",
-        icon: <PersonIcon color="inherit" />,
-        secondaryNavbar: true,
-        component: Business,
-        layout: "/admin",
-      },
+      }
     ],
   },
 ];

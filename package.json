@@ -2,7 +2,7 @@
 	"name": "business-formulisation-platform",
 	"version": "2.0.2",
 	"private": true,
-	"homepage": "https://demos.creative-tim.com/purity-ui-dashboard/#/",
+	"homepage": "https://demos.gisqo.com/",
 	"dependencies": {
 		"@chakra-ui/icons": "^1.1.5",
 		"@chakra-ui/react": "1.8.8",
@@ -17,6 +17,7 @@
 		"apexcharts": "^3.27.3",
 		"classnames": "2.3.1",
 		"framer-motion": "^4.1.17",
+		"google-map-react": "^2.2.0",
 		"match-sorter": "6.3.0",
 		"moment": "2.29.1",
 		"node-sass": "7.0.1",
