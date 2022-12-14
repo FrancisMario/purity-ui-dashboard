@@ -8,10 +8,10 @@ import {
     Text,
     useColorModeValue
 } from "@chakra-ui/react";
-import IconBox from "components/Icons/IconBox";
-import { CreativeTimLogo } from "components/Icons/Icons";
-import { Separator } from "components/Separator/Separator";
-import { SidebarHelp } from "components/Sidebar/SidebarHelp";
+import IconBox from "../Icons/IconBox";
+import { CreativeTimLogo } from "../Icons/Icons";
+import { Separator } from "../Separator/Separator";
+import { SidebarHelp } from "./SidebarHelp";
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 

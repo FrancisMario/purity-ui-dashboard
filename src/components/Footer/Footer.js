@@ -27,18 +27,16 @@ export default function Footer(props) {
         }}
         mb={{ base: "20px", xl: "0px" }}
       >
-        &copy; {1900 + new Date().getYear()},{" "}
+        copyright &copy; {1900 + new Date().getYear()},{" "}
         <Text as="span">
-          Powered by 
+          Powered By 
         </Text>
-        &
         <Link
           // color={linkTeal}
           color="teal.400"
           href="https://www.gisqo.com"
           target="_blank"
-        >
-          Gisqo 
+        > Gisqo
         </Link>
       </Text>
     </Flex>

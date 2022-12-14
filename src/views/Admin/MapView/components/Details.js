@@ -33,7 +33,7 @@ const Details = ({ title, data }) => {
       </CardHeader>
       <CardBody>
         <Flex direction='column' w='100%'>
-          {data.map((row) => {
+          {/* {data.map((row) => {
             return (
               <InvoicesRow
                 date={row.date}
@@ -43,7 +43,7 @@ const Details = ({ title, data }) => {
                 format={row.format}
               />
             );
-          })}
+          })} */}
         </Flex>
       </CardBody>
     </Card>

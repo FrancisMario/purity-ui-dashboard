@@ -14,8 +14,8 @@ import {
   HomeIcon,
   PersonIcon,
   RocketIcon,
-} from "components/Icons/Icons";
-import SidebarResponsive from "components/Sidebar/SidebarResponsive";
+} from "../Icons/Icons";
+import SidebarResponsive from "../Sidebar/SidebarResponsive";
 import PropTypes from "prop-types";
 import React from "react";
 import { NavLink } from "react-router-dom";
@@ -91,7 +91,7 @@ export default function AuthNavbar(props) {
         <Button
           fontSize="sm"
           ms="0px"
-          // me="0px"
+          me="0px"
           px="0px"
           me={{ sm: "2px", md: "16px" }}
           color={navbarIcon}
@@ -105,7 +105,7 @@ export default function AuthNavbar(props) {
         <Button
           fontSize="sm"
           ms="0px"
-          // me="0px"
+          me="0px"
           px="0px"
           me={{ sm: "2px", md: "16px" }}
           color={navbarIcon}
@@ -121,7 +121,7 @@ export default function AuthNavbar(props) {
         <Button
           fontSize="sm"
           ms="0px"
-          // me="0px"
+          me="0px"
           px="0px"
           me={{ sm: "2px", md: "16px" }}
           color={navbarIcon}
@@ -184,7 +184,7 @@ export default function AuthNavbar(props) {
           />
         </Box>
         {linksAuth}
-        {/* <Link href="https://creative-tim.com/product/purity-ui-dashboard">
+        <Link href="https://creative-tim.com/product/purity-ui-dashboard">
           <Button
             bg={bgButton}
             color={colorButton}
@@ -199,7 +199,7 @@ export default function AuthNavbar(props) {
           >
             Free Download
           </Button>
-        </Link> */}
+        </Link>
       </Flex>
     </Flex>
   );

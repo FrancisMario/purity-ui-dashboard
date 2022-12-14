@@ -1,3 +1,5 @@
+import React from "react";
+
 import { Box, useStyleConfig } from "@chakra-ui/react";
 function CardHeader(props) {
   const { variant, children, ...rest } = props;

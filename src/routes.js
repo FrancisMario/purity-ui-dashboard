@@ -5,6 +5,8 @@ import Billing from "views/Admin/Billing";
 import Profile from "views/User/Profile";
 import Businesses from "views/Admin/Businesses";
 import MapView from "views/Admin/MapView";
+import Assesments from "views/Admin/Assesments";
+import MyAssesment from "views/User/Assesment";
 
 import {
   HomeIcon,
@@ -18,6 +20,11 @@ import {
 
 var dashRoutes = [
   {
+    name: "User Menu",
+    category: "account",
+    state: "pageCollapse",
+    views: [
+  {
     path: "/profile",
     name: "Profile",
     icon: <PersonIcon color="inherit" />,
@@ -26,19 +33,13 @@ var dashRoutes = [
     layout: "/admin",
   },
   {
-    path: "/tables",
-    name: "Tables",
-    icon: <StatsIcon color="inherit" />,
-    component: Tables,
-    layout: "/admin",
-  },
-  {
-    path: "/billing",
-    name: "Billing",
+    path: "/myassesments",
+    name: "My Assesments",
     icon: <CreditIcon color="inherit" />,
-    component: Billing,
+    component: MyAssesment,
     layout: "/admin",
   },
+]},
   {
     name: "ADMIN TOOLS",
     category: "account",
@@ -61,7 +62,7 @@ var dashRoutes = [
       },
       {
         path: "/business",
-        name: "Businesseses",
+        name: "Businesses",
         icon: <PersonIcon color="inherit" />,
         secondaryNavbar: true,
         component: Businesses,
@@ -72,7 +73,7 @@ var dashRoutes = [
         name: "Assesments",
         icon: <PersonIcon color="inherit" />,
         secondaryNavbar: true,
-        component: Businesses,
+        component: Assesments,
         layout: "/admin",
       }
     ],

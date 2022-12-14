@@ -20,10 +20,10 @@ import avatar1 from "assets/img/avatars/avatar1.png";
 import avatar2 from "assets/img/avatars/avatar2.png";
 import avatar3 from "assets/img/avatars/avatar3.png";
 // Custom Icons
-import { ProfileIcon, SettingsIcon } from "components/Icons/Icons";
+import { ProfileIcon, SettingsIcon } from "../Icons/Icons";
 // Custom Components
-import { ItemContent } from "components/Menu/ItemContent";
-import SidebarResponsive from "components/Sidebar/SidebarResponsive";
+import { ItemContent } from "../Menu/ItemContent";
+import SidebarResponsive from "../Sidebar/SidebarResponsive";
 import PropTypes from "prop-types";
 import React from "react";
 import { NavLink } from "react-router-dom";
