@@ -66,7 +66,7 @@ const Assesments = ({ title, amount, captions, data }) => {
                 members={row.members}
                 budget={row.budget}
                 progression={row.progression}
-                editable={false}
+                editable={true}
               />
             );
           })}

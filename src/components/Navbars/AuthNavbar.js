@@ -130,10 +130,10 @@ export default function AuthNavbar(props) {
             <RocketIcon color={navbarIcon} w="12px" h="12px" me="0px" />
           }
         >
-          <Text>Sign Up</Text>
+          <Text>Register</Text>
         </Button>
       </NavLink>
-      <NavLink to="/auth/signin">
+      <NavLink to="/auth/login-page">
         <Button
           fontSize="sm"
           ms="0px"
@@ -145,7 +145,7 @@ export default function AuthNavbar(props) {
             <DocumentIcon color={navbarIcon} w="12px" h="12px" me="0px" />
           }
         >
-          <Text>Sign In</Text>
+          <Text>Login</Text>
         </Button>
       </NavLink>
     </HStack>
@@ -184,22 +184,6 @@ export default function AuthNavbar(props) {
           />
         </Box>
         {linksAuth}
-        <Link href="https://creative-tim.com/product/purity-ui-dashboard">
-          <Button
-            bg={bgButton}
-            color={colorButton}
-            fontSize="xs"
-            variant="no-hover"
-            borderRadius="35px"
-            px="30px"
-            display={{
-              sm: "none",
-              lg: "flex",
-            }}
-          >
-            Free Download
-          </Button>
-        </Link>
       </Flex>
     </Flex>
   );

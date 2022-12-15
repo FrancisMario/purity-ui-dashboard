@@ -28,13 +28,12 @@ import { IoCompassOutline } from "react-icons/io5";
 function MapView() {
   const defaultProps = {
     center: {
-      lat: 13.357886764309729,
-      lng: -16.67891976730211,
+      lat: 13.419539441966355,
+      lng: -16.673059490644196,
     },
-    zoom: 12.5,
+    zoom: 12.7,
   };
 
-  const AnyReactComponent = ({ text }) => <div>"Hello world"</div>;
   return (
     <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
       <Grid /* templateColumns={{ sm: "1fr", lg: "2fr 1.2fr" }} templateRows="1fr"*/
@@ -63,7 +62,7 @@ function MapView() {
                   <Marker
                     name={name}
                     company={company}
-                    email={email}s
+                    email={email}
                     number={number}
                     type={type}
                     address={address}

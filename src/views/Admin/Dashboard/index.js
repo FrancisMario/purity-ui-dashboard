@@ -4,7 +4,9 @@ import {
   Grid,
   Image,
   SimpleGrid,
+  BaseThemeWithExtensions,
   useColorModeValue,
+  Box
 } from "@chakra-ui/react";
 // assets
 // import peopleImage from "assets/img/people-image.png";
@@ -26,6 +28,8 @@ import OrdersOverview from "./components/OrdersOverview";
 import Assesments from "../../User/Profile/components/Projects";
 import SalesOverview from "./components/SalesOverview";
 import WorkWithTheRockets from "./components/WorkWithTheRockets";
+import BarChart from "components/Charts/BarChart";
+import LineChart from "components/Charts/LineChart";
 
 export default function Dashboard() {
   const iconBoxInside = useColorModeValue("white", "white");
@@ -58,6 +62,12 @@ export default function Dashboard() {
           icon={<DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
         />
       </SimpleGrid>
+      <Box py="12px">
+      <BarChart />
+      </Box>
+      <Box py="12px" height={"500px"}>
+      <LineChart />
+      </Box>
     </Flex>
   );
 }

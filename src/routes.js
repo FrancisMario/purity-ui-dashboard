@@ -7,6 +7,8 @@ import Businesses from "views/Admin/Businesses";
 import MapView from "views/Admin/MapView";
 import Assesments from "views/Admin/Assesments";
 import MyAssesment from "views/User/Assesment";
+import SignUp from "views/Auth/SignUp";
+import SignIn from "views/Auth/SignIn";
 
 import {
   HomeIcon,
@@ -77,6 +79,23 @@ var dashRoutes = [
         layout: "/admin",
       }
     ],
+  },
+
+  {
+    path: "/signup",
+    name: "Register",
+    icon: <CreditIcon color="inherit" />,
+    component: SignUp,
+    secondaryNavbar: false,
+    layout: "/auth",
+  },
+  {
+    path: "/login-page",
+    name: "Register",
+    icon: <CreditIcon color="inherit" />,
+    component: SignIn,
+    secondaryNavbar: false,
+    layout: "/auth",
   },
 ];
 export default dashRoutes;

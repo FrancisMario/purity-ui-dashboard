@@ -1,11 +1,11 @@
 // Chakra imports
-import { Flex, Grid, useColorModeValue } from "@chakra-ui/react";
-import avatar4 from "assets/img/avatars/avatar4.png";
+import { Flex, Grid, Box, useColorModeValue } from "@chakra-ui/react";
+import avatar4 from "assets/img/avatars/avatar4.jpg";
 import ProfileBgImage from "assets/img/ProfileBackground.png";
 import React from "react";
 import { FaCube, FaPenFancy } from "react-icons/fa";
 import { IoDocumentsSharp } from "react-icons/io5";
-import Conversations from "./components/Conversations";
+import Mentors from "./components/Mentors";
 import Header from "./components/Header";
 import PlatformSettings from "./components/PlatformSettings";
 import ProfileInformation from "./components/ProfileInformation";
@@ -60,15 +60,18 @@ function Profile() {
           location={"Serekunda"}
         />
         
-        <Conversations title={"Conversations"} />
+        <Mentors title={"Mentors"} />
       </Grid>
       {/* <Projects title={"Projects"} description={"Architects design houses"} /> */}
+      <Box py="20px">
       <Assesments
           title={"Related Assesments"}
           amount={30}
           captions={["Name",  "Completion"]}
           data={ongoingAssesmentData}
+          editable={true}
           />
+          </Box>
     </Flex>
   );
 }

@@ -19,24 +19,24 @@ const PlatformSettings = ({ title, subtitle1, subtitle2 }) => {
       <CardBody px='5px'>
         <Flex direction='column'>
           <Text fontSize='sm' color='gray.500' fontWeight='600' mb='20px'>
-            {subtitle1}
+            ACCOUNT SETTINGS
           </Text>
           <Flex align='center' mb='20px'>
-            <Switch colorScheme='teal' me='10px' />
-            <Text noOfLines={1} fontSize='md' color='gray.500' fontWeight='400'>
-              Email me when someone follows me
+            <Switch isChecked colorScheme='teal' me='10px' />
+            <Text noOfLines={1}  fontSize='md' color='gray.500' fontWeight='400'>
+              Enable email notifications
             </Text>
           </Flex>
           <Flex align='center' mb='20px'>
             <Switch colorScheme='teal' me='10px' />
             <Text noOfLines={1} fontSize='md' color='gray.500' fontWeight='400'>
-              Email me when someone answers on my post
+              List company profile on public list.
             </Text>
           </Flex>
           <Flex align='center' mb='20px'>
-            <Switch colorScheme='teal' me='10px' />
+            <Switch isChecked colorScheme='teal' me='10px' />
             <Text noOfLines={1} fontSize='md' color='gray.500' fontWeight='400'>
-              Email me when someone mentions me
+              Allow anyone to message me. 
             </Text>
           </Flex>
           <Text
@@ -46,24 +46,6 @@ const PlatformSettings = ({ title, subtitle1, subtitle2 }) => {
             m='6px 0px 20px 0px'>
             {subtitle2}
           </Text>
-          <Flex align='center' mb='20px'>
-            <Switch colorScheme='teal' me='10px' />
-            <Text noOfLines={1} fontSize='md' color='gray.500' fontWeight='400'>
-              New launches and projects
-            </Text>
-          </Flex>
-          <Flex align='center' mb='20px'>
-            <Switch colorScheme='teal' me='10px' />
-            <Text noOfLines={1} fontSize='md' color='gray.500' fontWeight='400'>
-              Monthly product changes
-            </Text>
-          </Flex>
-          <Flex align='center' mb='20px'>
-            <Switch colorScheme='teal' me='10px' />
-            <Text noOfLines={1} fontSize='md' color='gray.500' fontWeight='400'>
-              Subscribe to newsletter
-            </Text>
-          </Flex>
         </Flex>
       </CardBody>
     </Card>

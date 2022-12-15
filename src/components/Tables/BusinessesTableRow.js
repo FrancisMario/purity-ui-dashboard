@@ -60,7 +60,7 @@ function BusinessesTableRow(props) {
       </Td>
       <Td>
         <Button p="0px" bg="transparent" variant="no-hover" onClick={()=>{
-          window.location = '#/admin/profile'
+          window.location = '/admin/profile'
         }}>
           <Text
             fontSize="md"
