@@ -59,7 +59,9 @@ function BusinessesTableRow(props) {
         </Badge>
       </Td>
       <Td>
-        <Button p="0px" bg="transparent" variant="no-hover">
+        <Button p="0px" bg="transparent" variant="no-hover" onClick={()=>{
+          window.location = '#/admin/profile'
+        }}>
           <Text
             fontSize="md"
             color="gray.400"

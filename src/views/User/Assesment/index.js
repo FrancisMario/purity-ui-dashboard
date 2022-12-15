@@ -2,8 +2,8 @@
 import { Flex, Grid, useColorModeValue, Box } from "@chakra-ui/react";
 import React from "react";
 import { FaCube, FaPenFancy } from "react-icons/fa";
-import { dashboardTableData } from "variables/general";
-import Projects from "./components/Projects";
+import { ongoingAssesmentData } from "variables/new";
+import Assesments from "../Profile/components/Projects";
 
 
 function MyAssesment() {
@@ -20,11 +20,11 @@ function MyAssesment() {
       <Box>
         <Grid
           gap='26px'>
-        <Projects
+        <Assesments
           title={"Ongoing Assesments"}
           amount={30}
           captions={["Name",  "Completion"]}
-          data={dashboardTableData}
+          data={ongoingAssesmentData}
           />
         </Grid>
       </Box>

@@ -30,7 +30,7 @@ function AssessmentItem(props) {
   const textColor = useColorModeValue("gray.700", "white");
   const bgColor = useColorModeValue("#F8F9FA", "gray.800");
   const nameColor = useColorModeValue("gray.500", "white");
-  const { name, company, email, number } = props;
+  const { name, description, type } = props;
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -52,35 +52,13 @@ function AssessmentItem(props) {
             <Text color="gray.400" fontSize="sm" fontWeight="semibold">
               Description:{" "}
               <Text as="span" color="gray.500">
-                When the modal opens, focus is trapped within it. When the modal
-                opens, focus is automatically set to the first enabled element,
-                or the element from initialFocusRef. When the modal closes,
-                focus returns to the element that was focused before the modal
-                activated, or the element from finalFocusRef. Clicking on the
-                overlay closes the Modal. Pressing Esc closes the Modal.
-                Scrolling is blocked on the elements behind the modal. The modal
-                is rendered in a portal attached to the end of document.body to
-                break it out of the source order and make it easy to add
-                aria-hidden to its siblings.
-              </Text>
-              
-              <Text as="span" color="gray.500">
-                When the modal opens, focus is trapped within it. When the modal
-                opens, focus is automatically set to the first enabled element,
-                or the element from initialFocusRef. When the modal closes,
-                focus returns to the element that was focused before the modal
-                activated, or the element from finalFocusRef. Clicking on the
-                overlay closes the Modal. Pressing Esc closes the Modal.
-                Scrolling is blocked on the elements behind the modal. The modal
-                is rendered in a portal attached to the end of document.body to
-                break it out of the source order and make it easy to add
-                aria-hidden to its siblings.
+                {description}
               </Text>
             </Text>
             <Text color="gray.400" fontSize="sm" fontWeight="semibold">
               Type:{" "}
               <Text as="span" color="gray.500">
-                <Badge
+                {type == 'public' ? <Badge
                   bg={"green.400"}
                   color={"white"}
                   fontSize="10px"
@@ -88,7 +66,15 @@ function AssessmentItem(props) {
                   borderRadius="8px"
                 >
                   Public
-                </Badge>
+                </Badge> :<Badge
+                  bg={"blue.400"}
+                  color={"white"}
+                  fontSize="10px"
+                  p="3px 10px"
+                  borderRadius="8px"
+                >
+                  Private | Invite only.
+                </Badge>}
               </Text>
             </Text>
           </Flex>

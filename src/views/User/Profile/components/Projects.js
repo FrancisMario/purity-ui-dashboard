@@ -1,93 +1,79 @@
 // Chakra imports
 import {
-  Button,
   Flex,
-  Grid,
   Icon,
+  Table,
+  Tbody,
   Text,
+  Th,
+  Thead,
+  Tr,
   useColorModeValue,
 } from "@chakra-ui/react";
-// Assets
-import avatar2 from "assets/img/avatars/avatar2.png";
-import avatar4 from "assets/img/avatars/avatar4.png";
-import avatar6 from "assets/img/avatars/avatar6.png";
-import imageArchitect1 from "assets/img/ImageArchitect1.png";
-import imageArchitect2 from "assets/img/ImageArchitect2.png";
-import imageArchitect3 from "assets/img/ImageArchitect3.png";
 // Custom components
-import Card from "components/Card/Card";
-import CardBody from "components/Card/CardBody";
-import CardHeader from "components/Card/CardHeader";
+import Card from "components/Card/Card.js";
+import CardHeader from "components/Card/CardHeader.js";
+import AssesmentTableRow from "components/Tables/AssesmentTableRow ";
 import React from "react";
-import { FaPlus } from "react-icons/fa";
-import ProjectCard from "./ProjectCard";
+import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
-const Projects = ({ title, description }) => {
-  // Chakra color mode
+const Assesments = ({ title, amount, captions, data }) => {
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
-    <Card p='16px' my='24px'>
-      <CardHeader p='12px 5px' mb='12px'>
+    <Card p='16px' overflowX={{ sm: "scroll", xl: "hidden" }}>
+      <CardHeader p='12px 0px 28px 0px'>
         <Flex direction='column'>
-          <Text fontSize='lg' color={textColor} fontWeight='bold'>
+          <Text fontSize='lg' color={textColor} fontWeight='bold' pb='.5rem'>
             {title}
           </Text>
-          <Text fontSize='sm' color='gray.500' fontWeight='400'>
-            {description}
-          </Text>
+          <Flex align='center'>
+            <Icon
+              as={IoCheckmarkDoneCircleSharp}
+              color='teal.300'
+              w={4}
+              h={4}
+              pe='3px'
+            />
+            {/* <Text fontSize='sm' color='gray.400' fontWeight='normal'>
+              <Text fontWeight='bold' as='span'>
+                {amount} done
+              </Text>{" "}
+              this month.
+            </Text> */}
+          </Flex>
         </Flex>
       </CardHeader>
-      <CardBody px='5px'>
-        <Grid
-          templateColumns={{ sm: "1fr", md: "1fr 1fr", xl: "repeat(4, 1fr)" }}
-          templateRows={{ sm: "1fr 1fr 1fr auto", md: "1fr 1fr", xl: "1fr" }}
-          gap='24px'>
-          <ProjectCard
-            image={imageArchitect1}
-            name={"Project #1"}
-            category={"Modern"}
-            description={
-              "As Uber works through a huge amount of internal management turmoil."
-            }
-            avatars={[avatar2, avatar4, avatar6]}
-          />
-          <ProjectCard
-            image={imageArchitect2}
-            name={"Project #2"}
-            category={"Scandinavian"}
-            description={
-              "Music is something that every person has his or her own specific opinion about."
-            }
-            avatars={[avatar4, avatar2, avatar6, avatar4]}
-          />
-          <ProjectCard
-            image={imageArchitect3}
-            name={"Project #3"}
-            category={"Minimalist"}
-            description={
-              "Different people have different taste, especially various types of music."
-            }
-            avatars={[avatar2, avatar4, avatar6]}
-          />
-          <Button
-            p='0px'
-            bg='transparent'
-            color='gray.500'
-            border='1px solid lightgray'
-            borderRadius='15px'
-            minHeight={{ sm: "200px", md: "100%" }}>
-            <Flex direction='column' justifyContent='center' align='center'>
-              <Icon as={FaPlus} fontSize='lg' mb='12px' />
-              <Text fontSize='lg' fontWeight='bold'>
-                Create a New Project
-              </Text>
-            </Flex>
-          </Button>
-        </Grid>
-      </CardBody>
+      <Table variant='simple' color={textColor}>
+        <Thead>
+          <Tr my='.8rem' ps='0px'>
+            {captions.map((caption, idx) => {
+              return (
+                <Th color='gray.400' key={idx} ps={idx === 0 ? "0px" : null}>
+                  {caption}
+                </Th>
+              );
+            })}
+          </Tr>
+        </Thead>
+        <Tbody>
+          {data.map((row) => {
+            return (
+              <AssesmentTableRow
+                key={row.name}
+                name={row.name}
+                logo={row.logo}
+                members={row.members}
+                budget={row.budget}
+                progression={row.progression}
+                editable={false}
+              />
+            );
+          })}
+        </Tbody>
+      </Table>
     </Card>
   );
 };
 
-export default Projects;
+export default Assesments;

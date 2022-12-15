@@ -141,9 +141,8 @@ const Assesments = ({ title, data }) => {
               return (
                 <AssessmentItem
                   name={row.name}
-                  company={row.company}
-                  email={row.email}
-                  number={row.number}
+                  type={row.type}
+                  description={row.description}
                 />
               );
             })}

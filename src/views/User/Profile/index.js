@@ -9,7 +9,8 @@ import Conversations from "./components/Conversations";
 import Header from "./components/Header";
 import PlatformSettings from "./components/PlatformSettings";
 import ProfileInformation from "./components/ProfileInformation";
-import Projects from "./components/Projects";
+import Assesments from "./components/Projects";
+import { ongoingAssesmentData } from "variables/new";
 
 function Profile() {
   // Chakra color mode
@@ -25,15 +26,15 @@ function Profile() {
         backgroundHeader={ProfileBgImage}
         backgroundProfile={bgProfile}
         avatarImage={avatar4}
-        name={"Esthera Jackson"}
-        email={"esthera@simmmple.com"}
+        name={"Jobe Construction LTD"}
+        email={"Omar Jobe"}
         tabs={[
           {
             name: "OVERVIEW",
             icon: <FaCube w='100%' h='100%' />,
           },
           {
-            name: "TEAMS",
+            name: "MENTORSHIP",
             icon: <IoDocumentsSharp w='100%' h='100%' />,
           },
           {
@@ -51,16 +52,23 @@ function Profile() {
         <ProfileInformation
           title={"Profile Information"}
           description={
-            "Hi, I’m Esthera Jackson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
+            ""
           }
-          name={"Esthera Jackson"}
-          mobile={"(44) 123 1234 123"}
-          email={"esthera@simmmple.com"}
-          location={"United States"}
+          name={"Omar Jobe"}
+          mobile={"+220 3247035"}
+          email={"md@jobeconstruction.gm"}
+          location={"Serekunda"}
         />
+        
         <Conversations title={"Conversations"} />
       </Grid>
-      <Projects title={"Projects"} description={"Architects design houses"} />
+      {/* <Projects title={"Projects"} description={"Architects design houses"} /> */}
+      <Assesments
+          title={"Related Assesments"}
+          amount={30}
+          captions={["Name",  "Completion"]}
+          data={ongoingAssesmentData}
+          />
     </Flex>
   );
 }
