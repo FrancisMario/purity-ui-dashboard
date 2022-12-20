@@ -22,7 +22,7 @@ function SignIn() {
   const textColor = useColorModeValue("gray.400", "white");
 
   // form values
-  const [businessType, setBusinessType] = useState();
+  // const [businessType, setBusinessType] = useState();
 
   return (
     <Flex position="relative" mb="40px">
@@ -133,7 +133,7 @@ function SignIn() {
                 SIGN IN
               </Button>
             </FormControl>
-            <Flex
+            <Flex 
               flexDirection="column"
               justifyContent="center"
               alignItems="center"
