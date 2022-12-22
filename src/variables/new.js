@@ -52,86 +52,7 @@ export const Companies = [
     lat: 13.419539441966355,
     long: -16.673059490644196,
   },
-  // {
-  //   name: "Gisqo",
-  //   company: "Gisqo",
-  //   email: "oliver@burrito.com",
-  //   number: "FRB1235476",
-  //   type: "FRB1235476",
-  //   address: "",
-  //   lat: 13.413775796340795,
-  //   long: -16.69926427000261,
-  // },
-  // {
-  //   name: "Gisqo",
-  //   company: "Gisqo",
-  //   email: "oliver@burrito.com",
-  //   number: "FRB1235476",
-  //   type: "FRB1235476",
-  //   address: "",
-  //   lat: 13.40599581181662,
-  //   long: -16.728312166253588,
-  // },
-  // {
-  //   name: "Gisqo",
-  //   company: "Gisqo",
-  //   email: "oliver@burrito.com",
-  //   number: "FRB1235476",
-  //   type: "FRB1235476",
-  //   address: "",
-  //   lat: 13.396484994613648,
-  //   long: -16.705093209785826,
-  // },
-  // {
-  //   name: "Gisqo",
-  //   company: "Gisqo",
-  //   email: "oliver@burrito.com",
-  //   number: "FRB1235476",
-  //   type: "FRB1235476",
-  //   address: "",
-  //   lat: 13.403935695843202,
-  //   long: -16.67363772329199,
-  // },
-  // {
-  //   name: "Gisqo",
-  //   company: "Gisqo",
-  //   email: "oliver@burrito.com",
-  //   number: "FRB1235476",
-  //   type: "FRB1235476",
-  //   address: "",
-  //   lat: 13.413260458159538,
-  //   long: -16.674311732504062,
-  // },
-  // {
-  //   name: "Gisqo",
-  //   company: "Gisqo",
-  //   email: "oliver@burrito.com",
-  //   number: "FRB1235476",
-  //   type: "FRB1235476",
-  //   address: "",
-  //   lat: 13.402155206521423,
-  //   long: -16.655718020108672,
-  // },
-  // {
-  //   name: "Gisqo",
-  //   company: "Gisqo",
-  //   email: "oliver@burrito.com",
-  //   number: "FRB1235476",
-  //   type: "FRB1235476",
-  //   address: "",
-  //   lat: 13.419726622989014,
-  //   long: -16.67378240100339,
-  // },
-  // {
-  //   name: "Gisqo",
-  //   company: "Gisqo",
-  //   email: "oliver@burrito.com",
-  //   number: "FRB1235476",
-  //   type: "FRB1235476",
-  //   address: "",
-  //   lat: 13.437859259919273,
-  //   long: -16.682163818577187,
-  // },
+  
   // {
   //   name: "Gisqo",
   //   company: "Gisqo",
@@ -200,5 +121,21 @@ export const AssesmentsData = [
                 break it out of the source order and make it easy to add\
                 aria-hidden to its siblings.",
     type: "public",
+  },
+];
+
+
+export const availableMentors = [
+  {
+    profile: 'default',
+    name: "Kara Jange",
+    description: "Kara Jange is the CEO and co-founder of gquiz, a leading technology company that specicialises I the edutech sector. ",
+    status:true
+  },
+  {
+    profile: 'default',
+    name: "Baba Jaiteh",
+    description: "Baba is the CEO and co-founder of gquiz, a leading technology company that specicialises I the edutech sector. ",
+    status:false
   },
 ];

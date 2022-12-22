@@ -22,19 +22,19 @@ const PlatformSettings = ({ title, subtitle1, subtitle2 }) => {
             ACCOUNT SETTINGS
           </Text>
           <Flex align='center' mb='20px'>
-            <Switch isChecked colorScheme='teal' me='10px' />
+            <Switch isChecked colorScheme='blue' me='10px' />
             <Text noOfLines={1}  fontSize='md' color='gray.500' fontWeight='400'>
               Enable email notifications
             </Text>
           </Flex>
           <Flex align='center' mb='20px'>
-            <Switch colorScheme='teal' me='10px' />
+            <Switch colorScheme='blue' me='10px' />
             <Text noOfLines={1} fontSize='md' color='gray.500' fontWeight='400'>
               List company profile on public list.
             </Text>
           </Flex>
           <Flex align='center' mb='20px'>
-            <Switch isChecked colorScheme='teal' me='10px' />
+            <Switch isChecked colorScheme='blue' me='10px' />
             <Text noOfLines={1} fontSize='md' color='gray.500' fontWeight='400'>
               Allow anyone to message me. 
             </Text>

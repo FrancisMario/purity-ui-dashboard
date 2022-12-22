@@ -13,11 +13,11 @@ import {
 // Custom components
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
-import AssesmentTableRow from "components/Tables/AssesmentTableRow ";
+import MentorTableRow from "components/Tables/MentorTableRow";
 import React from "react";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
-const Assesments = ({ title, amount, captions, data }) => {
+const MentorsList = ({ title, amount, captions, data }) => {
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
@@ -35,12 +35,6 @@ const Assesments = ({ title, amount, captions, data }) => {
               h={4}
               pe='3px'
             />
-            {/* <Text fontSize='sm' color='gray.400' fontWeight='normal'>
-              <Text fontWeight='bold' as='span'>
-                {amount} done
-              </Text>{" "}
-              this month.
-            </Text> */}
           </Flex>
         </Flex>
       </CardHeader>
@@ -59,7 +53,7 @@ const Assesments = ({ title, amount, captions, data }) => {
         <Tbody>
           {data.map((row) => {
             return (
-              <AssesmentTableRow
+              <MentorTableRow
                 key={row.name}
                 name={row.name}
                 logo={row.logo}
@@ -76,4 +70,4 @@ const Assesments = ({ title, amount, captions, data }) => {
   );
 };
 
-export default Assesments;
+export default MentorsList;

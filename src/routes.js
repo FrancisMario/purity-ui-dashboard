@@ -7,6 +7,7 @@ import Businesses from "views/Admin/Businesses";
 import MapView from "views/Admin/MapView";
 import Assesments from "views/Admin/Assesments";
 import MyAssesment from "views/User/Assesment";
+import Mentors from "views/User/Mentors";
 import SignUp from "views/Auth/SignUp";
 import SignIn from "views/Auth/SignIn";
 
@@ -41,7 +42,15 @@ var dashRoutes = [
     component: MyAssesment,
     layout: "/admin",
   },
+  {
+    path: "/mentors",
+    name: "Mentors",
+    icon: <CreditIcon color="inherit" />,
+    component: Mentors,
+    layout: "/admin",
+  }
 ]},
+
   {
     name: "ADMIN TOOLS",
     category: "account",
@@ -86,15 +95,15 @@ var dashRoutes = [
     name: "Register",
     icon: <CreditIcon color="inherit" />,
     component: SignUp,
-    secondaryNavbar: false,
+    secondaryNavbar: true,
     layout: "/auth",
   },
   {
     path: "/login-page",
-    name: "Register",
+    name: "Login",
     icon: <CreditIcon color="inherit" />,
     component: SignIn,
-    secondaryNavbar: false,
+    secondaryNavbar: true,
     layout: "/auth",
   },
 ];

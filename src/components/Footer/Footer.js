@@ -4,7 +4,7 @@ import { Flex, Link, List, ListItem, Text } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
 export default function Footer(props) {
-  // const linkTeal = useColorModeValue("teal.400", "red.200");=
+  // const linkblue = useColorModeValue("blue.400", "red.200");=
   return (
     <Flex
       flexDirection={{
@@ -32,8 +32,8 @@ export default function Footer(props) {
           Powered By 
         </Text>
         <Link
-          // color={linkTeal}
-          color="teal.400"
+          // color={linkblue}
+          color="blue.400"
           href="https://www.gisqo.com"
           target="_blank"
         > Gisqo

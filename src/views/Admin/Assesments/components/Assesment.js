@@ -30,7 +30,7 @@ import React, {useState} from "react";
 
 const Assesments = ({ title, data }) => {
   const textColor = useColorModeValue("gray.700", "white");
-  const iconTeal = useColorModeValue("teal.300", "teal.300");
+  const iconblue = useColorModeValue("blue.300", "blue.300");
   const borderColor = useColorModeValue("#dee2e6", "gray.500");
   const bgButton = useColorModeValue(
     "linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)",

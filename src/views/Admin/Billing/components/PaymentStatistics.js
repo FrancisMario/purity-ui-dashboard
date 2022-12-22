@@ -8,14 +8,14 @@ import { Separator } from "components/Separator/Separator";
 import React from "react";
 
 const PaymentStatistics = ({ icon, title, description, amount }) => {
-  const iconTeal = useColorModeValue("teal.300", "teal.300");
+  const iconblue = useColorModeValue("blue.300", "blue.300");
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
     <Card p='16px' display='flex' align='center' justify='center'>
       <CardBody>
         <Flex direction='column' align='center' w='100%' py='14px'>
-          <IconBox as='box' h={"60px"} w={"60px"} bg={iconTeal}>
+          <IconBox as='box' h={"60px"} w={"60px"} bg={iconblue}>
             {icon}
           </IconBox>
           <Flex

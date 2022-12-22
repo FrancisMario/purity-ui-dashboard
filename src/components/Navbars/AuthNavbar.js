@@ -190,6 +190,6 @@ export default function AuthNavbar(props) {
 }
 
 AuthNavbar.propTypes = {
-  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"]),
+  color: PropTypes.oneOf(["blue", "info", "success", "warning", "danger"]),
   brandText: PropTypes.string,
 };

@@ -7,12 +7,14 @@ import {
   Td,
   Text,
   Tr,
+  Button,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
+import avatar1 from "assets/img/avatars/avatar1.png";
 
-function DashboardTableRow(props) {
-  const { logo, name, members, budget, progression } = props;
+function MentorTableRow(props) {
+  const { logo, name, members, budget, progression, editable = true } = props;
   const textColor = useColorModeValue("gray.700", "white");
   return (
     <Tr>
@@ -29,25 +31,15 @@ function DashboardTableRow(props) {
           </Text>
         </Flex>
       </Td>
-
       <Td>
-        <AvatarGroup size="sm">
-          {members.map((member) => {
-            return (
-              <Avatar
-                name="Ryan Florence"
-                key={member}
-                src={member}
-                _hover={{ zIndex: "3", cursor: "pointer" }}
-              />
-            );
-          })}
-        </AvatarGroup>
-      </Td>
-      <Td>
-        <Text fontSize="md" color={textColor} fontWeight="bold" pb=".5rem">
-          {budget}
-        </Text>
+        <Flex direction="column">
+          <Text
+            fontSize="md"
+            color="blue.300"
+            fontWeight="bold"
+            pb=".2rem"
+          >Gisqo Technologies</Text>
+        </Flex>
       </Td>
       <Td>
         <Flex direction="column">
@@ -56,17 +48,14 @@ function DashboardTableRow(props) {
             color="blue.300"
             fontWeight="bold"
             pb=".2rem"
-          >{`${progression}%`}</Text>
-          <Progress
-            colorScheme={progression === 100 ? "blue" : "cyan"}
-            size="xs"
-            value={progression}
-            borderRadius="15px"
-          />
+          >Bio</Text>
+          this is the bio text for this mentor          
         </Flex>
+      </Td>
+      <Td>
       </Td>
     </Tr>
   );
 }
 
-export default DashboardTableRow;
+export default MentorTableRow;

@@ -1,67 +1,83 @@
+// Chakra imports
 import {
+  Flex,
+  Grid,
+  useColorModeValue,
   Box,
+  GridItem,
+  Center,
   Icon,
   Badge,
-  Flex,
   Text,
-  useColorModeValue,
   Button,
-  useDisclosure,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  RadioGroup,
-  Radio,
-  HStack,
-  Input,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaPencilAlt, FaTrashAlt, FaStepBackward } from "react-icons/fa";
-import StepbyStep from "components/AssesmentCard";
-
-function AssessmentItem(props) {
+// import { FaCube, FaPenFancy } from "react-icons/fa";
+import { ongoingAssesmentData } from "variables/new";
+import { FaTrashAlt, FaPencilAlt } from "react-icons/fa";
+function StepbyStep() {
+  // Chakra color mode
   const textColor = useColorModeValue("gray.700", "white");
+  const bgProfile = useColorModeValue(
+    "hsla(0,0%,100%,.8)",
+    "linear-gradient(112.83deg, rgba(255, 255, 255, 0.21) 0%, rgba(255, 255, 255, 0) 110.84%)"
+  );
   const bgColor = useColorModeValue("#F8F9FA", "gray.800");
   const nameColor = useColorModeValue("gray.500", "white");
-  const { name, description, type } = props;
-
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-
 
   return (
-    <>
-      <Box
+    <Grid
+      h="container.xl"
+      templateRows="repeat(2, 1fr)"
+      templateColumns="repeat(5, 1fr)"
+      gap={2}
+    >
+      <GridItem
+        borderRadius={10}
+        padding={5}
+        rowSpan={"auto"}
+        colSpan={1}
+        boxShadow="md"
+      >
+        <Flex color="white">
+          <Box flex="1">
+            <Center w="100px" bg="green.500">
+              {" "}
+              Hello world
+            </Center>
+          </Box>
+        </Flex>
+      </GridItem>
+      <GridItem
+        borderRadius={10}
+        padding={5}
+        rowSpan={"auto"}
+        colSpan={4}
+        boxShadow={"md"}
+      >
+            <Box
         p="24px"
         bg={bgColor}
         my="22px"
-        onClick={onOpen}
+        height={"100%"}
         borderRadius="12px"
         cursor={"pointer"}
       >
         <Flex justify="space-between" w="100%">
           <Flex direction="column" maxWidth="70%">
             <Text color={nameColor} fontSize="md" fontWeight="bold" mb="10px">
-              {name}
+              {"name"}
             </Text>
             <Text color="gray.400" fontSize="sm" fontWeight="semibold">
               Description:{" "}
               <Text as="span" color="gray.500">
-                {description}
+                {"description"}
               </Text>
             </Text>
             <Text color="gray.400" fontSize="sm" fontWeight="semibold">
               Type:{" "}
               <Text as="span" color="gray.500">
-                {type == 'public' ? <Badge
+                {true == 'public' ? <Badge
                   bg={"green.400"}
                   color={"white"}
                   fontSize="10px"
@@ -95,7 +111,7 @@ function AssessmentItem(props) {
               <Flex color="red.500" cursor="pointer" align="center" p="12px">
                 <Icon as={FaTrashAlt} me="4px" />
                 <Text fontSize="sm" fontWeight="semibold">
-                  DELETE
+                  Previous
                 </Text>
               </Flex>
             </Button>
@@ -103,33 +119,16 @@ function AssessmentItem(props) {
               <Flex color={textColor} cursor="pointer" align="center" p="12px">
                 <Icon as={FaPencilAlt} me="4px" />
                 <Text fontSize="sm" fontWeight="semibold">
-                  EDIT
+                  Next
                 </Text>
               </Flex>
             </Button>
           </Flex>
         </Flex>
       </Box>
-
-      <Modal
-        blockScrollOnMount={false}
-        size="full"
-        isOpen={isOpen}
-        onClose={onClose}
-      >
-        
-        <ModalOverlay />
-        <ModalContent>
-          <ModalCloseButton />
-          <ModalHeader>Registration Assessment</ModalHeader>
-          <ModalBody>
-          <StepbyStep/>
-          </ModalBody>
-          <ModalFooter></ModalFooter>
-        </ModalContent>
-      </Modal>
-    </>
+      </GridItem>
+    </Grid>
   );
 }
 
-export default AssessmentItem;
+export default StepbyStep;

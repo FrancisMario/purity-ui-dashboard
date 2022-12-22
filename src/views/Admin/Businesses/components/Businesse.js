@@ -36,7 +36,7 @@ import List from "./List";
 import { tablesTableData } from "variables/general";
 
 const BusinessList = ({ title, mastercard, visa }) => {
-  const iconTeal = useColorModeValue("teal.300", "teal.300");
+  const iconblue = useColorModeValue("blue.300", "blue.300");
   const textColor = useColorModeValue("gray.700", "white");
   const borderColor = useColorModeValue("#dee2e6", "gray.500");
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -77,7 +77,7 @@ const BusinessList = ({ title, mastercard, visa }) => {
                     <InputRightElement width="4.5rem">
                       <Button
                         size="md"
-                        colorScheme="teal"
+                        colorScheme="blue"
                         onClick={handleClick}
                       >
                         Send
